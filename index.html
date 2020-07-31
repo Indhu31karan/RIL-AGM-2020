@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>RIL AGM 2020</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Baloo+Da+2' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Rowdies' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        
+        <style>
+            p{font-family:'Baloo Da 2';font-size: 20px;font-weight: 300;}
+            h1{font-family:'Lobster';}
+            h3{font-family: 'Acme';}
+            h2{font-family: 'Rowdies';}
+            dd{font-family: 'Lato';font-size:18px;}
+            .header{ background-color:#888; }
+
+            
+            .content{min-height: 90px;}
+            .banner-image{  padding-bottom: 50px;
+                            
+               margin-bottom: 60px; 
+               text-align:center; 
+               color: rgb(189,255,107);
+               background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTn_U9sr95QX-CiXf_3sasd-ZTZAjCeNZfmug&usqp=CAU)no-repeat center; 
+               background-size: cover;
+               
+             }
+             .inner-banner-image{ padding-top: 3%; 
+                    width:50%; 
+                    margin:auto;
+                    box-shadow:0px 10px 10px 2px rgba(0,0,0,0.4);
+                    }
+                     
+            .banner_content{ position: relative; 
+                 padding-top: 16%; 
+                 padding-bottom: 16%; 
+                 overflow:hidden; 
+                 margin-bottom: 10%; 
+                 background-color: rgba(255,255,255,0.1);
+                 backface-visibility: hidden;
+                 max-width: 760px;}
+            
+            .thumbnail{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+            button{box-shadow:0px 3px 3px 2px rgba(0,0,0,0.4);}
+            button:hover{background-color: rgb(0,200,200);box-shadow:0px 5px 5px 2px rgba(0,0,0,0.4)  ;border-radius: 20px; }
+            #box{box-shadow:0px 5px 5px 2px rgba(0,0,0,0.4);color:black;height:60px;width:100px; background-image: linear-gradient(45deg,#845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871); }
+            #gallerywrapper #gallery div a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#gallerywrapper #gallery div a:hover {
+    background-color: #ddd;
+    color: black;
+}
+            #gallerywrapper {
+     width:640px;
+     height:450px;
+     margin:0 auto;
+     position:relative;
+     font-family:'Baloo Da 2';font-size: 20px;font-weight: 300;
+ } 
+
+ #gallerywrapper #gallery {
+     position:absolute;
+     left:0;
+     top:0;
+     height:450px;
+     width:640px;
+     overflow:hidden;
+     text-align:center;
+ } 
+
+ #gallerywrapper #gallery div {
+     width:640px; height:900px; 
+     padding-top:0px; 
+     position:relative;
+     
+ } 
+
+ #gallerywrapper #gallery div img {
+     clear:both; 
+     display:block; 
+     margin:0 auto;
+     padding-bottom:0px;
+     border:0;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+ } 
+
+ #gallerywrapper #gallery div h3 {
+     padding:10px 0 0 0; 
+     margin:0; 
+     font-size:18px;
+ } 
+
+ #gallerywrapper #gallery div p {
+     padding:5px 0; 
+     margin:0; 
+     font-size:12px; 
+     line-height:18px;
+ } 
+
+ #gallery .previous{ 
+     display:inline;
+     float:left;
+     margin-left:100px;
+     
+     text-decoration:none;
+     background-color: #4CAF50;
+     color: white;
+ } 
+
+ #gallery .next{ 
+     display:inline;
+     float:right;
+     margin-right:100px;
+     text-decoration:none;
+     background-color: #4CAF50;
+     color: white;
+ }
+ .round {
+    border-radius: 100%;
+    }
+    
+    #gallerywrapper #gallery div p .button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 8px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#gallerywrapper #gallery div p .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#gallerywrapper #gallery div p .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#gallerywrapper #gallery div p .button:hover span {
+  padding-right: 25px;
+}
+
+#gallerywrapper #gallery div p .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+        </style>
+    </head>
+    
+    <body style="background-color: #e5e4e2">
+      <div class="container-fluid">
+         
+        <nav class="navbar navbar-default navbar-fixed-top"> 
+            <div class='container-fluid'>
+                
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span>                        
+                    </button>
+                <a class="navbar-brand" id="box" href="#"> 
+                    2020
+                    <div style="font-size:8.5px">"The COVID year"</div>
+                </a></div>
+               
+                    
+                        
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="jgp.html" target="_blank"><button type="button" class="btn btn-dark">Jio - Google partnership</button></a></li>
+                                <li><a href="5G.html" target="_blank"><button type="button" class="btn btn-dark">5G Solution</button></a></li>
+                                <li><a href="jglass.html" target="_blank"><button type="button" class="btn btn-dark">Jio glass</button></a></li>
+                                <li><a href="jTV.html" target="_blank"><button type="button" class="btn btn-dark">Jio TV+</button></a></li>
+                                <li><a href="others.html" target="_blank"><button type="button" class="btn btn-dark">Others</button></a></li> 
+                            </ul>
+                        </div>
+                        
+                    
+                  
+                        </div>
+                    
+                </nav>
+            
+      </div>
+               
+            
+           <!--<li><a href="#"><span class='caret'></span></a></li> navbar-dark bg-success-->
+            <!--<div class="collapse navbar-collapse">    
+            
+            <ul class="nav navbar-nav navbar-brand navbar-right">
+                
+                <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">
+                <li><a href="#"><span class='glyphicon glyphicon-menu-hamburger'></span></a></button>
+                <ul class='dropdown-menu'>
+                        <li><a href="#">Jio - Google partnership</a></li>
+                        <li><a href="#">5G Solution</a></li>
+                        <li><a href="#">Jio glass</a></li>
+                        <li><a href="#">Jio TV+</a></li>
+                        <li><a href="#">Jio mart</a></li> 
+                    
+                
+                </ul>
+            </ul>   
+            </div>-->
+            </div>
+                
+            
+         </nav> 
+             
+       
+                    
+        
+        
+            
+      
+         <div class="content">
+            <div class="banner-image" >
+                <div class="container-fluid">
+                <div class="inner-banner-image">
+                    <div class="banner_content">
+                        <h1 style="font-size: 53px">Reliance</h1>
+                        <p style="font-size: 30px">43rd Annual General Meeting</p>
+                    </div>
+                </div>
+                </div>     
+            </div>
+         </div>
+    
+        
+    <div class="container">
+        <dl>
+            <dt><h2 style="font-size:25px;"><u>Presence in Cutting-Edge Technologies</u></h2></dt>
+            <dd>&emsp;RIL’s Chairman & Managing Director, Mukesh D. Ambani stated that over 20 startup partners who are a part of jio platform has built significant world class capabilities in several cutting-edge technologies like</dd>
+        </dl><br><br>
+        <!--<div class="row">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                      
+                        <img src="images/5G.jpg" alt="Responsive image">
+                        
+                        <div class="caption">
+                            <center> <div><b>4G And 5G Technologies</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/cc.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Cloud Computing</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/dos.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Devices & Operating System</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/bda.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Big Data Analytics</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/ml&ai.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Machine Learning And A.I.</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                 <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/vr&mr.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Virtual And Mixed Reality</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/bc.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Block Chain</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/nlu.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Natural Language Understanding</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="images/cv.jpg" alt="Responsive image">
+                        <div class="caption">
+                            <center> <div><b>Computer Vision</b></div></center>
+                        </div>
+                    </div>
+                </div>
+            
+                
+            
+        </div>-->
+        <div id="gallerywrapper">
+	    <div id="gallery">
+		    <div id="pic1">
+                          <img src="images/5G.jpg" alt="Responsive image" height="350" width="500"> 
+                            
+			    <!--<img src="https://unsplash.it/g/500/350?random" height="350" width="500" alt="Image 1">-->
+			    <a class="previous round" href="#pic9">&lt;</a>
+			    <a class="next round" href="#pic2">&gt;</a>
+                            <p><a href="https://justaskthales.com/en/difference-4g-5g/" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>4G And 5G Technologies</span></button></a></p>
+			    
+		    </div>
+		    <div id="pic2">
+                            <img src="images/cc.jpg" alt="Responsive image" height="350" width="500">
+			    <!--<img src="https://unsplash.it/g/500/350" height="350" width="500" alt="Image 2">-->
+			    <a class="previous round" href="#pic1">&lt;</a>
+			    <a class="next round" href="#pic3">&gt;</a>
+                            <p><a href="https://azure.microsoft.com/en-in/overview/what-is-cloud-computing/" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Cloud Computing</span></button></a></p>
+		    </div>
+		    <div id="pic3">
+                            <img src="images/dos.jpg" alt="Responsive image" height="350" width="500">
+			    <!--<img src="https://unsplash.it/g/500/350?random" height="350" width="500" alt="Image 3">-->
+			    <a class="previous round" href="#pic2">&lt;</a>
+			    <a class="next round" href="#pic4">&gt;</a>
+			    <p><a href="https://www.pcmag.com/encyclopedia/term/operating-system#:~:text=Common%20Operating%20Systems&text=Smartphones%20and%20tablets%20use%20Apple's,and%20Microsoft's%20Windows%2010%20Mobile.&text=The%20operating%20system%20is%20the%20master%20control%20program%20in%20the%20computer.&text=The%20operating%20system%20communicates%20with,software%20drivers%20for%20the%20devices." target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Devices & Operating System</span></button></a></p>
+		    </div>
+		    <div id="pic4">
+                            <img src="images/bda.jpg" alt="Responsive image" height="350" width="500">
+			    <!--<img src="https://unsplash.it/g/500/350" height="350" width="500" alt="Image 4">-->
+			    <a class="previous round" href="#pic3">&lt;</a>
+			    <a class="next round" href="#pic5">&gt;</a>
+			    <p><a href="https://www.webopedia.com/TERM/B/big_data_analytics.html#:~:text=Big%20Data%20analytics%20is%20the,patterns%20and%20other%20useful%20information." target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Big Data Analytics</span></button></a></p>
+		    </div>
+		    <div id="pic5">
+                            <img src="images/ml&ai.jpg" alt="Responsive image" height="350" width="500">
+			    <!--<img src="https://unsplash.it/g/500/350?random" height="350" width="500" alt="Image 5">-->
+			    <a class="previous round" href="#pic4">&lt;</a>
+			    <a class="next round" href="#pic6">&gt;</a>
+			    <p><a href="https://marutitech.com/artificial-intelligence-and-machine-learning/" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Machine Learning And A.I.</span></button></a></p>
+		    </div>
+                    <div id="pic6">
+                            <img src="images/vr&mr.jpg" alt="Responsive image" height="350" width="500">
+                            <a class="previous round" href="#pic5">&lt;</a>
+			    <a class="next round" href="#pic7">&gt;</a>
+			    <p><a href="https://www.forbes.com/sites/quora/2018/02/02/the-difference-between-virtual-reality-augmented-reality-and-mixed-reality/#7a39e2792d07" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Virtual And Mixed Reality</span></button></a></p>
+                    </div>
+                    <div id="pic7">
+                            <img src="images/bc.jpg" alt="Responsive image" height="350" width="500">
+                            <a class="previous round" href="#pic6">&lt;</a>
+			    <a class="next round" href="#pic8">&gt;</a>
+			    <p><a href="https://www.euromoney.com/learning/blockchain-explained/what-is-blockchain#:~:text=Blockchain%20is%20a%20system%20of,computer%20systems%20on%20the%20blockchain." target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Block Chain</span></button></a></p>
+                    
+                    </div>
+                    <div id="pic8">
+                            <img src="images/nlu.jpg" alt="Responsive image" height="350" width="500">
+                            <a class="previous round" href="#pic7">&lt;</a>
+			    <a class="next round" href="#pic9">&gt;</a>
+			    <p><a href="https://searchenterpriseai.techtarget.com/definition/natural-language-understanding-NLU" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Natural Language Understanding</span></button></a></p>
+                    
+                    </div>
+                    <div id="pic9">
+                            <img src="images/cv.jpg" alt="Responsive image" height="350" width="500">
+                            <a class="previous round" href="#pic8">&lt;</a>
+			    <a class="next round" href="#pic1">&gt;</a>
+			    <p><a href="https://towardsdatascience.com/everything-you-ever-wanted-to-know-about-computer-vision-heres-a-look-why-it-s-so-awesome-e8a58dfb641e" target="_blank" style="color:white;"><button class="button" style="font-size: 18px;"><span>Computer Vision</span></button></a></p>
+                    
+                    </div>
+	    </div>
+	</div>
+        
+        
+        
+        
+        
+        
+        
+    </div>
+        
+        
+    
+   
+        
+    
+   
+   <!--  <nav class="navbar navbar-inverse navbar-fixed-top ">
+                    <div class="container-fluid" >
+                        <div class="navbar-header" style="height:9px;">
+                            <div class="header">
+                                <a href="#" class="navbar-brand">Virtual Meeting</a>
+                            </div>
+                            </div>
+                        </div>
+   --> 
+  
+    </body>
+    
+</html>
